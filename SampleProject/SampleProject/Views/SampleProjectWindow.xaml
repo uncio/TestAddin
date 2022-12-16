@@ -1,0 +1,34 @@
+﻿<Window x:Class="SampleProject.Views.SampleProjectWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:prop="clr-namespace:SampleProject.Properties"
+        xmlns:local="clr-namespace:SampleProject.Views"
+        mc:Ignorable="d"
+        Title="SampleProjectWindow" Height="450" Width="400" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <GroupBox Grid.Row="0"
+                  Margin="15"
+                  Header="{x:Static prop:Resources.HeaderCheckOverrides}">
+            <Grid>
+                <local:SettingsPage DataContext="{Binding SettingsPageVM}"
+                                    x:Name="Settings" Loaded="Settings_Loaded"/>
+                <local:ResultsPage DataContext="{Binding ResultsPageVM}"
+                                   x:Name="Results"/>
+            </Grid>
+        </GroupBox>
+        <Button Grid.Row="1"
+                Grid.ColumnSpan="2"
+                Margin="0 0 25 5"
+                Content="{x:Static prop:Resources.Close}"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Right"
+                Width="100"
+                Click="Button_Click"/>
+    </Grid>
+</Window>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RevitAddIns>
+	<AddIn Type="Application">
+		<Assembly>SampleProject.dll</Assembly>
+		<ClientId>096A6EE7-01D1-44E6-AD84-1305FB6EE59D</ClientId>
+		<FullClassName>SampleProject.Application</FullClassName>
+		<Name>Sample project</Name>
+		<VendorId>Sample</VendorId>
+		<VendorDescription>sample</VendorDescription>
+	</AddIn>
+</RevitAddIns>
